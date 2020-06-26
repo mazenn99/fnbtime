@@ -1,0 +1,74 @@
+/*------------------------------------------------------------------
+
+-------------------------------------------------------------------*/
+/**
+ * Add your style in this file
+*/
+.nav-tabs {
+    margin-bottom: 15px;
+}
+
+.sign-with {
+    margin-top: 25px;
+    padding: 20px;
+}
+
+div#OR {
+    height: 30px;
+    width: 30px;
+    border: 1px solid #C2C2C2;
+    border-radius: 50%;
+    font-weight: bold;
+    line-height: 28px;
+    text-align: center;
+    font-size: 12px;
+    float: right;
+    position: absolute;
+    right: -16px;
+    top: 40%;
+    z-index: 1;
+    background: #DFDFDF;
+}
+
+#logo-img {
+    max-width: 40px;
+}
+.login {
+    /* margin: 50px auto; */
+}
+.selected-form {
+    color:#DFDFDF;
+}
+.login-page-form span {
+    cursor: pointer;;
+}
+.login-page-form .signup {
+    display: none;
+}
+i.fa.fa-heart-o.favorite {
+    background-color:#bdc3c7;
+    padding:5px;
+    border-radius: 50%;
+    color:#000;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+i.fa.fa-heart-o.favorite:hover {
+    background-color:#e74c3c;
+    color:#ecf0f1
+}
+
+.driver-icon a{
+    width: 100px;
+    display: inline-block;
+    background: #DDD;
+    padding: 10px;
+    border-radius: 10px;
+}
+/*.sslCertificate {*/
+/*    margin:10px auto;*/
+/*}*/
+.sslCertificate img {
+    width:auto;
+    float:right
+}

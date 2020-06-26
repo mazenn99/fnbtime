@@ -1,0 +1,90 @@
+[12-May-2020 18:12:53 UTC] PHP Warning:  move_uploaded_file(/home/onpeqomeg1ob/public_html/fnbtime6/uploads/1589307173LN160218-2_xlarge.jpg): failed to open stream: No such file or directory in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 353
+[12-May-2020 18:12:53 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpWU3M3k' to '/home/onpeqomeg1ob/public_html/fnbtime6/uploads/1589307173LN160218-2_xlarge.jpg' in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 353
+[12-May-2020 18:12:53 UTC] PHP Notice:  Undefined variable: verify in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 369
+[12-May-2020 18:12:53 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php:370
+Stack trace:
+#0 {main}
+  thrown in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 370
+[12-May-2020 18:15:38 UTC] PHP Warning:  move_uploaded_file(/home/onpeqomeg1ob/public_html/fnbtime6/uploads/1589307338chorizo-mozarella-gnocchi-bake-cropped.jpg): failed to open stream: No such file or directory in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 353
+[12-May-2020 18:15:38 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpYKP5ie' to '/home/onpeqomeg1ob/public_html/fnbtime6/uploads/1589307338chorizo-mozarella-gnocchi-bake-cropped.jpg' in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 353
+[12-May-2020 18:15:38 UTC] PHP Warning:  move_uploaded_file(/home/onpeqomeg1ob/public_html/fnbtime6/uploads/1589307338gettyimages-639389404-612x612.jpg): failed to open stream: No such file or directory in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 353
+[12-May-2020 18:15:38 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php6m2fJC' to '/home/onpeqomeg1ob/public_html/fnbtime6/uploads/1589307338gettyimages-639389404-612x612.jpg' in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 353
+[12-May-2020 18:15:38 UTC] PHP Notice:  Undefined variable: verify in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 369
+[12-May-2020 18:15:38 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php:370
+Stack trace:
+#0 {main}
+  thrown in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 370
+[12-May-2020 18:17:52 UTC] PHP Warning:  move_uploaded_file(/home/onpeqomeg1ob/public_html/fnbtime6/uploads/1589307472gettyimages-639389404-612x612.jpg): failed to open stream: No such file or directory in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 353
+[12-May-2020 18:17:52 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpHaj3hl' to '/home/onpeqomeg1ob/public_html/fnbtime6/uploads/1589307472gettyimages-639389404-612x612.jpg' in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 353
+[12-May-2020 18:20:02 UTC] PHP Warning:  move_uploaded_file(/home/onpeqomeg1ob/public_html/fnbtime6/uploads/1589307602chorizo-mozarella-gnocchi-bake-cropped.jpg): failed to open stream: No such file or directory in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 353
+[12-May-2020 18:20:02 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php7UvohR' to '/home/onpeqomeg1ob/public_html/fnbtime6/uploads/1589307602chorizo-mozarella-gnocchi-bake-cropped.jpg' in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 353
+[12-May-2020 18:20:02 UTC] PHP Warning:  move_uploaded_file(/home/onpeqomeg1ob/public_html/fnbtime6/uploads/1589307602gettyimages-639389404-612x612.jpg): failed to open stream: No such file or directory in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 353
+[12-May-2020 18:20:02 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpaOYxdo' to '/home/onpeqomeg1ob/public_html/fnbtime6/uploads/1589307602gettyimages-639389404-612x612.jpg' in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 353
+[12-May-2020 18:20:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php:370
+Stack trace:
+#0 {main}
+  thrown in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 370
+[12-May-2020 18:22:50 UTC] PHP Warning:  move_uploaded_file(/home/onpeqomeg1ob/public_html/fnbtime6/uploads/1589307770gettyimages-639389404-612x612.jpg): failed to open stream: No such file or directory in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 355
+[12-May-2020 18:22:50 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpTVZUcQ' to '/home/onpeqomeg1ob/public_html/fnbtime6/uploads/1589307770gettyimages-639389404-612x612.jpg' in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 355
+[12-May-2020 18:22:50 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php:372
+Stack trace:
+#0 {main}
+  thrown in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 372
+[12-May-2020 18:27:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php:372
+Stack trace:
+#0 {main}
+  thrown in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 372
+[12-May-2020 18:28:21 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php:372
+Stack trace:
+#0 {main}
+  thrown in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 372
+[12-May-2020 20:28:10 UTC] PHP Warning:  mysqli_stmt::bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 814
+[12-May-2020 20:28:10 UTC] PHP Notice:  Undefined variable: imgFields in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 821
+[12-May-2020 20:28:25 UTC] PHP Warning:  mysqli_stmt::bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 814
+[12-May-2020 20:28:25 UTC] PHP Notice:  Undefined variable: imgFields in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 821
+[12-May-2020 20:28:40 UTC] PHP Warning:  mysqli_stmt::bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 814
+[12-May-2020 20:28:40 UTC] PHP Notice:  Undefined variable: imgFields in /home/onpeqomeg1ob/public_html/test/fnbtime6/admin-panel/restaurant.php on line 821
+[04-Jun-2020 12:19:06 UTC] PHP Warning:  include_once(/home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panelinit.php): failed to open stream: No such file or directory in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/index.php on line 3
+[04-Jun-2020 12:19:07 UTC] PHP Warning:  include_once(): Failed opening '/home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panelinit.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/index.php on line 3
+[04-Jun-2020 12:19:07 UTC] PHP Notice:  Undefined variable: tpl in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/index.php on line 67
+[04-Jun-2020 12:19:07 UTC] PHP Warning:  include_once(footer.php): failed to open stream: No such file or directory in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/index.php on line 67
+[04-Jun-2020 12:19:07 UTC] PHP Warning:  include_once(): Failed opening 'footer.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/index.php on line 67
+[04-Jun-2020 20:02:25 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:02:25 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:02:25 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:02:28 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:02:31 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:02:31 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:02:31 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:02:31 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:02:32 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:02:42 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:02:42 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:02:50 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:02:50 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:02:51 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:03:10 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:03:10 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:03:10 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:03:10 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:03:33 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:03:33 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:03:33 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:04:28 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:04:28 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:06:24 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:06:25 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:23:14 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:23:14 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[04-Jun-2020 20:23:14 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/onpeqomeg1ob/public_html/test/webversionFnbtime/admin-panel/ajax.php on line 132
+[13-Jun-2020 09:31:36 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/onpeqomeg1ob/public_html/admin-panel/users.php on line 253
+[13-Jun-2020 09:31:36 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/onpeqomeg1ob/public_html/admin-panel/users.php on line 256
+[13-Jun-2020 09:31:36 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/onpeqomeg1ob/public_html/admin-panel/users.php on line 263
+[13-Jun-2020 09:31:36 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/onpeqomeg1ob/public_html/admin-panel/users.php on line 270
+[13-Jun-2020 09:31:36 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/onpeqomeg1ob/public_html/admin-panel/users.php on line 277
+[13-Jun-2020 09:31:36 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/onpeqomeg1ob/public_html/admin-panel/users.php on line 277
+[13-Jun-2020 09:31:36 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/onpeqomeg1ob/public_html/admin-panel/users.php on line 287
+[13-Jun-2020 09:31:36 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/onpeqomeg1ob/public_html/admin-panel/users.php on line 287
+[13-Jun-2020 09:31:36 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/onpeqomeg1ob/public_html/admin-panel/users.php on line 292
+[13-Jun-2020 09:31:36 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/onpeqomeg1ob/public_html/admin-panel/users.php on line 299
+[13-Jun-2020 09:31:36 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/onpeqomeg1ob/public_html/admin-panel/users.php on line 306
