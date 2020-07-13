@@ -37,6 +37,7 @@ require_once $sendEm . 'SendEmail.php';
                 $mail = new SendEmail();
                 $mail->sendForgetPassword($forgetPassData['name'] , $forgetPassData['email'] , $token);
                 $success = true;
+                $mysql->close();
             }
         } else {
             array_push($error , "sorry There's no email $_POST[email] in Our Record <a href='login.php'>please Click Here sign up</a>");

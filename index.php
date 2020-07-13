@@ -304,6 +304,7 @@ if (isset($_GET['do']) && in_array($_GET['do'] , $allowDo)) { # This is to resen
         </section>
 
     </div>
+            <div id="x"></div>
     <!-- end Main Wrapper -->
 
     <!-- start Footer Wrapper -->

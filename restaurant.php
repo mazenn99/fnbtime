@@ -258,7 +258,6 @@ $resData = getAllRestaurant($startFrom, $numPerPage);
 
                                                 <div class="meta">
 
-
                                                     <div class="right-bottom">
                                                         <?php if (getAllReservation($data['id'])) { ?>
                                                             <div class="price">All Reservation
@@ -335,11 +334,31 @@ $resData = getAllRestaurant($startFrom, $numPerPage);
 
         </div>
 
+
     </div>
     <!-- end Main Wrapper -->
 
     <!-- start Footer Wrapper -->
     <div class="footer-wrapper scrollspy-footer">
-
-
+<!--google api test-->
+<!--        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
+<!--        <script>-->
+<!--            // https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyCIeMegQWlcJuh6qu_K-fWkyMtgfPz-DT0-->
+<!--            function getCode() {-->
+<!--                let location = '22 Main st Boston MA';-->
+<!--                axios.get('https://maps.googleapis.com/maps/api/geocode/json' , {-->
+<!--                    params: {-->
+<!--                        address:location,-->
+<!--                        key:'AIzaSyCIeMegQWlcJuh6qu_K-fWkyMtgfPz-DT0'-->
+<!--                    }-->
+<!--                })-->
+<!--                .then(function(res){-->
+<!--                    console.log(res)-->
+<!--                })-->
+<!--                .catch(function(error) {-->
+<!--                    console.log(error)-->
+<!--                })-->
+<!--            }-->
+<!--            getCode();-->
+<!--        </script>-->
 <?php include_once $tpl . 'footer.php' ?>

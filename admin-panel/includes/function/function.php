@@ -394,4 +394,5 @@ function errorMessage($msg) { ?>
       function deleteTokens($userid) {
           global $mysql;
           $stmt = $mysql->query("DELETE FROM verification WHERE user_id = $userid");
+
       }

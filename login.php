@@ -48,6 +48,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $country = mysqli_real_escape_string($mysql, filter_var($_POST['country'], FILTER_SANITIZE_NUMBER_INT));
         $city = mysqli_real_escape_string($mysql, filter_var($_POST['city'], FILTER_SANITIZE_NUMBER_INT));
         $phone = mysqli_real_escape_string($mysql, filter_var($_POST['phone'], FILTER_SANITIZE_NUMBER_INT));
+        $subsc = isset($_POST['subscription']) ? 1 : 0;
+
 
         if (empty($username)) {
             array_push($error, 'sorry please fill you\'re name');
@@ -86,15 +88,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if (!count($error)) {
             $pass = password_hash($password, PASSWORD_DEFAULT);
-            $stmt = $mysql->prepare("INSERT INTO users (email , password , name , phone , country , city  , create_at)
-                                              VALUES (? , ? , ? , ? , ? , ? , now())");
-            $stmt->bind_param('ssssii', $dbEmail, $dbPassword, $dbName, $dbPhone, $dbCountry, $dbCity);
+            $stmt = $mysql->prepare("INSERT INTO users (email , password , name , phone , country , city  , create_at , subscription)
+                                              VALUES (? , ? , ? , ? , ? , ? , now() , ?)");
+            $stmt->bind_param('ssssiis', $dbEmail, $dbPassword, $dbName, $dbPhone, $dbCountry, $dbCity , $dbSubscription);
             $dbEmail = $email;
             $dbPassword = $pass;
             $dbName = $username;
             $dbPhone = $phone;
             $dbCountry = $country;
             $dbCity = $city;
+            $dbSubscription = $subsc;
             $stmt->execute();
             if ($stmt->error) {
                 echo 'please try again there\'s someting wrong';
@@ -246,8 +249,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                 </div>
             </div>
-
-            <button name="sign-up" class="btn btn-primary">Sign-up</button>
+            <div class="checkbox-block font-icon-checkbox mb-10">
+                <input class="filterType checkbox" name="subscription" id="filter_cuisine" type="checkbox">
+                <label for="filter_cuisine">Subscription to Our Newsletter ?</label>
+            </div>
+            <button name="sign-up" class="btn btn-primary mb-10">Sign-up</button>
         </form>
     </div>
 </div>
