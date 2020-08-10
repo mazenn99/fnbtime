@@ -68,7 +68,11 @@ if (isset($_GET['do']) && in_array($_GET['do'] , $allowDo)) { # This is to resen
     endif;
     }?>
 
-
+    <!-- map container which is hidden but needed for geocoding and places api usage -->
+    <div class="map-holder" style="display: none;">
+        <div id="hotel-detail-map" data-lat="25.19739" data-lon="55.28821" style="width: 100%; height: 480px;"></div>
+    </div>
+    
     <!-- start Main Wrapper -->
     <div class="main-wrapper scrollspy-container">
 
@@ -150,39 +154,10 @@ if (isset($_GET['do']) && in_array($_GET['do'] , $allowDo)) { # This is to resen
                 </div>
 
                 <div class="restaurant-grid-wrapper mb-30">
-
                     <div class="GridLex-gap-30 GridLex-gap-20-mdd">
-
                         <div class="GridLex-grid-noGutter-equalHeight GridLex-grid-center">
-                            <?php foreach (getRestaurant('LIMIT 8') as $result) {
-                                ?>
-                                <div class="GridLex-col-3_sm-4_xs-6_xss-12">
-
-                                    <div class="restaurant-grid-item">
-                                        <a href="restaurant-info.php?restaurant=<?php echo $result['id'] ?>">
-                                            <div class="image"> <?php $img = explode(',', $result['picture']); ?>
-                                                <img src="uploads/<?php echo $img[0] ?>" alt="Image"/>
-                                            </div>
-                                            <div class="content">
-                                                <h5><?php echo $result['name'] ?> </h5>
-                                                <p class="location"><i
-                                                            class="fa fa-map-marker"></i> <?php echo $result['couName'] ?>
-                                                    <span> </span> <?php echo $result['citName'] ?></p>
-                                                <p class="cuisine">
-                                                    Cuisine: <?php $type = explode(',', $result['type_food']); # This is get the type of restaurant
-                                                    foreach ($type as $types):?>
-                                                        <span><?php echo $types ?></span>
-                                                    <?php endforeach; ?>
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            <?php } ?>
                         </div>
-
                     </div>
-
                 </div>
 
                 <div class="text-center">

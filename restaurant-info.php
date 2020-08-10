@@ -60,6 +60,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { # Start This to create new booking
 
 ?>
 
+    <div id="introLoaderRestaurant" class="introLoading"></div>
+
     <!-- start Container Wrapper -->
     <div class="container-wrapper">
 
@@ -69,7 +71,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { # Start This to create new booking
         <div class="main-wrapper scrollspy-container">
 
             <!-- start hero-header -->
-            <div class="hero hero-detail" style="background-image:url('images/hero-header/hero-image.png');">
+            <div class="hero hero-detail">
 
                 <div class="container">
 
@@ -81,20 +83,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { # Start This to create new booking
 
                                 <div class="GridLex-col-8_sm-7_xs-12_xss-12">
                                     <div class="detail-header">
-                                        <div class="detail-header-inner">
-                                            <h3 style="display: inline-block"><?php echo $result['name'] ?></h3>
-                                            <p class="location"><i
-                                                        class="fa fa-map-marker"></i> <?php echo $result['couName'] ?>
-                                                , <?php echo $result['citName'] ?> </p>
-                                            <div class="rating-wrapper">
-                                                <?php
-                                                    $num = getAllReservation($result['id']);
-                                                if (!empty($num)) { ?>
-                                                    <span class="texting">  All Reservation : <?php
-                                                        echo $num ?></span>
-                                                <?php } ?>
-                                            </div>
-                                        </div>
+                                        <div class="detail-header-inner"></div>
                                     </div>
                                 </div>
                                 <?php
@@ -159,11 +148,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { # Start This to create new booking
                                             <li>
                                                 <a href="#detail-content-sticky-nav-00">Overview</a>
                                             </li>
-
+                                            <li>
+                                                <a href="#detail-content-sticky-nav-02">Review</a>
+                                            </li>
                                             <li>
                                                 <a href="#detail-content-sticky-nav-03">Photo</a>
                                             </li>
-
+                                            <li>
+                                                <a href="#detail-content-sticky-nav-04">Location</a>
+                                            </li>
                                         </ul>
 
                                     </div>
@@ -184,7 +177,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { # Start This to create new booking
                                     <h3><span>Overview</span></h3>
                                 </div>
 
-                                <p class="font500"><?php echo $result['description'] ?></p>
+                                <p class="font500"></p>
 
                                 <div class="driver-icon section-title">
                                     <?php $data = getAppDelivery($_GET['restaurant']);
@@ -230,21 +223,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { # Start This to create new booking
                                             <h5 class="text-primary">Contact Information</h5>
 
 
-                                            <ul class="contact-list">
-                                                <li>
-                                                    <div class="icon">
-                                                        <i class="ti-email"></i>
-                                                    </div
-                                                    <div class="content">
-                                                        <p><?php echo $result['number'] ?>
-                                                            <br> <?php echo $result['couName'] . ' ' . $result['citName'] ?>
-                                                        </p>
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                            <ul class="contact-list"></ul>
 
-                                            <a href="<?php echo $result['map_url'] ?>" target="_blank"
-                                               class="btn btn-primary btn-sm anchor-alt">See map &amp; get route</a>
+                                            <a href="#" target="_blank" class="btn btn-primary btn-sm anchor-alt">See map &amp; get route</a>
                                         </div>
 
                                     </div>
@@ -255,56 +236,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { # Start This to create new booking
 
                                             <h5 class="text-primary">Opening Time</h5>
 
-                                            <ul class="open-time-list">
-                                                <?php foreach ($openClose as $period): ?>
-                                                    <li>
-
-                                                        <div class="row">
-
-                                                            <div class="col-xs-6 col-sm-6">
-															<span class="day">
-                                                                <?php
-                                                                switch ($period['day']) {
-                                                                    case 1:
-                                                                        echo 'Sunday';
-                                                                        break;
-                                                                    case 2:
-                                                                        echo 'Monday';
-                                                                        break;
-                                                                    case 3:
-                                                                        echo 'Tuesday';
-                                                                        break;
-                                                                    case 4:
-                                                                        echo 'Wednesday';
-                                                                        break;
-                                                                    case 5:
-                                                                        echo 'Thursday';
-                                                                        break;
-                                                                    case 6:
-                                                                        echo 'Friday';
-                                                                        break;
-                                                                    case 7:
-                                                                        echo 'Saturday';
-                                                                        break;
-                                                                    default :
-                                                                        echo "<span class='time text-uppercase font700 spacing-2'> Close </span>";
-                                                                }
-                                                                ?>
-															</span>
-                                                            </div>
-
-                                                            <div class="col-xs-6 col-sm-6">
-															<span class="time">
-																<?php echo $period['open'] . ' ' . $period['close'] ?>
-															</span>
-                                                            </div>
-
-                                                        </div>
-
-                                                    </li>
-                                                <?php endforeach; ?>
-
-                                            </ul>
+                                            <ul class="open-time-list"></ul>
 
                                         </div>
 
@@ -313,7 +245,27 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { # Start This to create new booking
                                 </div>
 
                             </div>
-
+                            
+                            <div id="detail-content-sticky-nav-02" class="detail-content-section clearfix">
+                                <div class="section-title-02">
+                                    <h3><span>Review</span></h3>
+                                </div>
+                                <div class="review-wrapper">
+                                    <div class="review-header">
+                                        <div class="GridLex-gap-30">
+                                            <div class="GridLex-grid-middle">
+                                                <div class="GridLex-col-4_sm-5_xs-12">
+                                                    <div class="average-score"></div> <!-- rating and review values are added here -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review-item-wrapper">
+                                        <ul class="review-item-list"></ul> <!-- user reviews are added here -->
+                                    </div>
+                                </div>
+                                <div class="clear mb-15"></div>
+                            </div>
 
                             <div id="detail-content-sticky-nav-03" class="detail-content-section clearfix">
 
@@ -325,6 +277,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { # Start This to create new booking
 
                                 <div class="clear mb-15"></div>
 
+                            </div>
+
+                            <div id="detail-content-sticky-nav-04" class="detail-content-section clearfix">
+                                <div class="section-title-02">
+                                    <h3><span>Location</span></h3>
+                                </div>
+                                <div class="map-holder">
+                                    <!-- map -->
+                                    <div id="hotel-detail-map" data-lat="25.19739" data-lon="55.28821" style="width: 100%; height: 480px;"></div>
+                                </div>
                             </div>
 
                         </div>
@@ -398,6 +360,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { # Start This to create new booking
                                                 </div>
 
                                             </div>
+
+                                            <div class="working-status"></div> <!-- open or closed is added here -->
+
                                             <?php if (isset($_SESSION['username'])) { # this to check if user verify on system or not
                                                 $valid = getVerify($_SESSION['userid']);
                                                 if ($valid['verification']) {
@@ -443,31 +408,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { # Start This to create new booking
 
                 <div class="GridLex-gap-30 container">
 
-                    <div class="GridLex-grid-noGutter-equalHeight">
-                        <?php foreach (getRestaurant('LIMIT 4') as $result):
-                            $img = explode(',', $result['picture']); ?>
-                            <div class="GridLex-col-3_sm-4_xs-6_xss-12">
-                                <div class="restaurant-grid-item">
-                                    <a href="restaurant-info.php?restaurant=<?php echo $result['id'] ?>">
-                                        <div class="image">
-                                            <img src="uploads/<?php echo $img[1] ?>" alt="Image"/></div>
-                                        <div class="content">
-                                            <h5><?php echo $result['name'] ?></h5>
-                                            <p class="location"><i class="fa fa-map-marker mr-5"></i><?php echo $result['couName'] . ' ' . $result['citName'] ?>
-                                            </p>
-                                            <div class="rating-wrapper"></div>
-                                            <p class="cuisine">
-                                                Cuisine: <?php $type = explode(',', $result['type_food']); # This is get the type of restaurant
-                                                foreach ($type as $types):?>
-                                                    <span><?php echo $types ?></span>
-                                                <?php endforeach; ?>
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
+                    <div class="GridLex-grid-noGutter-equalHeight"></div> <!-- other restaurants in same city are added here -->
                 </div>
 
             </div>
@@ -477,38 +418,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { # Start This to create new booking
 
     <!-- start Footer Wrapper -->
     <div class="footer-wrapper scrollspy-footer">
-        
-    
-<script type="text/javascript" src="js/images-grid.js"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-<script type="text/javascript" src="js/infobox.js"></script>
-
-<!-- load the images to the slider -->
-
-<script>
-    jQuery(function($) {
-
-        "use strict";
-
-        /**
-         * Image Grid for Photo
-         */
-
-        $('#detail-food-photo').imagesGrid({
-            images: [
-                <?php
-                $img = explode(',', $result['picture']);
-                foreach ($img as $item):
-                ?>
-                { src: 'uploads/<?php echo $item ?>', alt: 'Second image', title: 'Second image', caption: 'Image Caption Twelve' },
-                <?php endforeach; ?>
-            ],
-            cells: 5,
-            align: true
-        });
-
-    });
-</script>
 
 <?php include_once $tpl . 'footer.php' ?>
 

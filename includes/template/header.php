@@ -1,4 +1,10 @@
-<?php include_once 'init.php'?>
+<?php 
+    // define('ROOT_PATH', 'C:\xampp\htdocs\fnbtime' . '/');
+    // include_once ROOT_PATH . 'init.php';
+
+    include_once 'init.php';
+?>
+
 <!doctype html>
 <html lang="<?php echo $config['lang'] ?>" dir="<?php echo $config['dir'] ?>">
 
@@ -43,6 +49,12 @@
     <!-- For your own style -->
     <link href="css/your-style.css" rel="stylesheet">
 
+    <style>
+        .detail-content-for-sticky-menu.for-detail-page ul.contact-list .content {
+            min-height: 48px;
+        }
+    </style>
+    
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
