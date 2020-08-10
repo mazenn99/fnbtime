@@ -59,7 +59,7 @@
 <script type="text/javascript" src="js/images-grid.js"></script>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0dvWaoca8-GE42WHuN6aegix-QegI3I0&callback=initMap&libraries=places&v=weekly"></script>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=Your_API_Key&callback=initMap&libraries=places&v=weekly"></script>
 <script src="map/scripts/helper_script.js"></script>
 <?php 
     if(preg_match('/index.php$/', $_SERVER['PHP_SELF'])) {
