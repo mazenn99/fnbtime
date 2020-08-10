@@ -1,35 +1,42 @@
 <?php
 session_start();
 $getTitle = 'Resaturant';
-include_once 'init.php';
-if ($_SERVER['REQUEST_METHOD'] == 'GET') { # This is to search button from index page and restaurant page
-    $search = mysqli_real_escape_string($mysql, filter_var(isset($_GET['search']) ? $_GET['search'] : NULL, FILTER_SANITIZE_STRING));
-    $stmt = $mysql->prepare("SELECT restaurant.* , keywords.name AS keywords , country.name AS couName , city.name AS citName FROM restaurant 
-                                      INNER JOIN keywords ON keywords.res_id = restaurant.id
-                                      INNER JOIN country ON country.id = restaurant.country
-                                      INNER JOIN city ON city.id = restaurant.city
-                                      WHERE restaurant.name LIKE CONCAT('%' , ? , '%') OR keywords.name LIKE CONCAT('%' , ? , '%')");
-    $stmt->bind_param('ss', $dbSearch, $dbSearchByKeyWords);
-    $dbSearch = $search;
-    $dbSearchByKeyWords = $search;
-    $stmt->execute();
-    $result = $stmt->get_result();
-}
-# This is to make a pagination
-if (isset($_GET['page'])) {
-    $page = mysqli_real_escape_string($mysql, filter_var($_GET['page'], FILTER_SANITIZE_NUMBER_INT));
-} else {
-    $page = 1;
-}
+// include_once 'init.php';
+// if ($_SERVER['REQUEST_METHOD'] == 'GET') { # This is to search button from index page and restaurant page
+//     $search = mysqli_real_escape_string($mysql, filter_var(isset($_GET['search']) ? $_GET['search'] : NULL, FILTER_SANITIZE_STRING));
+//     $stmt = $mysql->prepare("SELECT restaurant.* , keywords.name AS keywords , country.name AS couName , city.name AS citName FROM restaurant 
+//                                       INNER JOIN keywords ON keywords.res_id = restaurant.id
+//                                       INNER JOIN country ON country.id = restaurant.country
+//                                       INNER JOIN city ON city.id = restaurant.city
+//                                       WHERE restaurant.name LIKE CONCAT('%' , ? , '%') OR keywords.name LIKE CONCAT('%' , ? , '%')");
+//     $stmt->bind_param('ss', $dbSearch, $dbSearchByKeyWords);
+//     $dbSearch = $search;
+//     $dbSearchByKeyWords = $search;
+//     $stmt->execute();
+//     $result = $stmt->get_result();
+// }
+// # This is to make a pagination
+// if (isset($_GET['page'])) {
+//     $page = mysqli_real_escape_string($mysql, filter_var($_GET['page'], FILTER_SANITIZE_NUMBER_INT));
+// } else {
+//     $page = 1;
+// }
 $numPerPage = 10;
-$startFrom = ($page - 1) * 10;
-$resData = getAllRestaurant($startFrom, $numPerPage);
+// $startFrom = ($page - 1) * 10;
+// $resData = getAllRestaurant($startFrom, $numPerPage);
 
 # This is to make a pagination
 ?>
-    <body class="full-width-container">
+<body class="full-width-container">
 
-    <!-- start Container Wrapper -->
+    <!-- map container which is hidden but needed for geocoding and places api usage -->
+    <div class="map-holder" style="display: none;">
+        <div id="hotel-detail-map" data-lat="25.19739" data-lon="55.28821" style="width: 100%; height: 480px;"></div>
+    </div>
+
+    <div id="introLoaderList" class="introLoading"></div>
+
+<!-- start Container Wrapper -->
 <div class="container-wrapper">
 
 <?php include_once 'includes/template/navbar.php' ?>
@@ -135,156 +142,8 @@ $resData = getAllRestaurant($startFrom, $numPerPage);
 <!--                        </div>-->
 <!---->
 <!--                    </div>-->
-                    <?php if (isset($_GET['search'])) {
-                        if ($result->num_rows) {
-                            $data = $result->fetch_all(MYSQLI_ASSOC); ?>
-                            <div class="restaurant-list-item-wrapper no-last-bb">
-                                <?php foreach ($data as $resDataSearch): ?>
-                                    <div class="restaurant-list-item clearfix">
 
-                                        <div class="GridLex-grid-noGutter-equalHeight">
-
-                                            <div class="GridLex-col-3_sm-3_xss-12">
-                                                <div class="image"> <?php $img = explode(',', $resDataSearch['picture']); ?>
-                                                    <img src="uploads/<?php echo $img[0] ?>" alt="Image"/>
-                                                </div>
-                                            </div>
-
-                                            <div class="GridLex-col-9_sm-9_xss-12">
-
-                                                <div class="GridLex-grid-noGutter-equalHeight">
-
-                                                    <div class="GridLex-col-9_sm-12 content-wrapper">
-
-                                                        <div class="content">
-                                                            <h5>
-                                                                <a href="restaurant-info.php?restaurant=<?php echo $resDataSearch['id'] ?>"><?php echo $resDataSearch['name'] ?></a>
-                                                            </h5>
-                                                            <p class="location"><i
-                                                                        class="fa fa-map-marker"></i> <?php echo $resDataSearch['couName'] . ' ' . $resDataSearch['citName'] ?>
-                                                            </p>
-                                                            <p class="short-info"><?php if (strlen($resDataSearch['description']) > 50)
-                                                                    echo substr($resDataSearch['description'], 0, 300);
-                                                                ?></p>
-                                                            <p class="cuisine">
-                                                                Cuisine: <?php $type = explode(',', $resDataSearch['type_food']); # This is get the type of restaurant
-                                                                foreach ($type as $types):?>
-                                                                    <span><?php echo $types ?></span>
-                                                                <?php endforeach; ?>
-                                                            </p>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <div class="GridLex-col-3_sm-12 meta-wrapper">
-
-                                                        <div class="meta">
-
-
-                                                            <div class="right-bottom">
-                                                                <?php if (getAllReservation($resDataSearch['id'])) { ?>
-                                                                    <div class="price">All Reservation
-                                                                        <span><?php echo getAllReservation($resDataSearch['id']) ?><i
-                                                                                    class="fa fa-bookmark mr-5"
-                                                                                    style="margin-left:3px"></i></span>
-                                                                    </div>
-                                                                    <div class="clear"></div>
-                                                                <?php } ?>
-                                                                <a href="restaurant-info.php?restaurant=<?php echo $resDataSearch['id'] ?>"
-                                                                   class="btn btn-primary btn-sm btn-block">Details</a>
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                <?php endforeach; ?>
-
-                            </div>
-                            ?>
-                        <?php } else {
-                            echo 'Sorry No Data to get all restaurant <a href="restaurant.php" class="btn btn-sm btn-primary">Click Here</a> ';
-                            die();
-                        }
-                    }
-                    ?>
-
-                    <div class="restaurant-list-item-wrapper no-last-bb" id="filterTypeCuisineSearch">
-                        <?php foreach ($resData as $data): ?>
-                            <div class="restaurant-list-item clearfix">
-
-                                <div class="GridLex-grid-noGutter-equalHeight">
-
-                                    <div class="GridLex-col-3_sm-3_xss-12">
-                                        <div class="image"> <?php $img = explode(',', $data['picture']); ?>
-                                            <img src="uploads/<?php echo $img[0] ?>" alt="Image"/>
-                                        </div>
-                                    </div>
-
-                                    <div class="GridLex-col-9_sm-9_xss-12">
-
-                                        <div class="GridLex-grid-noGutter-equalHeight">
-
-                                            <div class="GridLex-col-9_sm-12 content-wrapper">
-
-                                                <div class="content">
-                                                    <h5>
-                                                        <a href="restaurant-info.php?restaurant=<?php echo $data['id'] ?>"><?php echo $data['name'] ?></a>
-                                                    </h5>
-                                                    <p class="location"><i
-                                                                class="fa fa-map-marker"></i> <?php echo $data['couName'] . ' ' . $data['citName'] ?>
-                                                    </p>
-                                                    <p class="short-info"><?php if (strlen($data['description']) > 40)
-                                                            echo substr($data['description'], 0, 300);
-                                                        ?></p>
-                                                    <p class="cuisine">
-                                                        Cuisine: <?php $type = explode(',', $data['type_food']); # This is get the type of restaurant
-                                                        foreach ($type as $types):?>
-                                                            <span><?php echo $types ?></span>
-                                                        <?php endforeach; ?>
-                                                    </p>
-                                                </div>
-
-                                            </div>
-
-                                            <div class="GridLex-col-3_sm-12 meta-wrapper">
-
-                                                <div class="meta">
-
-                                                    <div class="right-bottom">
-                                                        <?php if (getAllReservation($data['id'])) { ?>
-                                                            <div class="price">All Reservation
-                                                                <span><?php echo getAllReservation($data['id']) ?><i
-                                                                            class="fa fa-bookmark mr-5"
-                                                                            style="margin-left:3px"></i></span>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                        <?php } ?>
-                                                        <a href="restaurant-info.php?restaurant=<?php echo $data['id'] ?>"
-                                                           class="btn btn-primary btn-sm btn-block">Details</a>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        <?php endforeach; ?>
-
-                    </div>
+                    <div class="restaurant-list-item-wrapper no-last-bb"></div>
 
                     <div class="pagination-wrapper">
 
